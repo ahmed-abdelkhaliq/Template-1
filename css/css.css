@@ -45,7 +45,7 @@ body  {
   align-items: center;
 }
 .header .logo {
-  width: 50px;
+  width: 70px;
 }
 .header .links {
   position: relative;
@@ -86,7 +86,6 @@ width: 100%;
 .header .links:hover .icon span:nth-child(3) {
 width: 100%;
 }
-
 .header .links:hover .icon span:last-child {
   width: 100%;
 }
@@ -122,6 +121,8 @@ width: 100%;
 }
 .header .links ul li a:hover {
   padding-left: 25px;
+  font-size: 23px;
+  font-weight: bold;
 }
 .header .links ul li:not(:last-child) a {
   border-bottom: 1px solid #ddd;
