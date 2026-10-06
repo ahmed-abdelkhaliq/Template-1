@@ -1,5 +1,8 @@
 
 /* Start Global Rules */
+:root {
+  --main-color: #10cab7;
+}
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -37,7 +40,9 @@ body  {
 
 /* Start Header */
 .header{
-  padding: 20px;
+  background-color: #f6f6f6;
+  padding: 10px 20px;
+  z-index: 2;
 }
 .header .container {
   display: flex;
@@ -99,6 +104,7 @@ width: 100%;
   min-width: 200px;
   top: calc(100% + 10px);
   display: none;
+  z-index: 2;
 }
 .header .links ul::before {
   content: "";
@@ -128,3 +134,62 @@ width: 100%;
   border-bottom: 1px solid #ddd;
 }
 /* End Header */
+
+/* Start Landing Section */
+.landing {
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  height: calc(100vh - 52.39px);
+  position: relative;
+  z-index: 1;
+}
+.landing .intro-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  width: 320px;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+}
+.landing .intro-text h1 {
+  margin: 0;
+  font-weight: bolder;
+  font-size: 50px;
+  color: var(--main-color);
+}
+.landing .intro-text p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+/* End Landing Section */
+
+/* Start Features */
+
+.features {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-gap: 20px;
+}
+.features .feat {
+  padding: 20px;
+  text-align: center;
+}
+.features .feat i {
+color: var(--main-color);
+}
+.features .feat h3 {
+font-weight: 800;
+margin: 30px 0;
+}
+.features .feat p {
+line-height: 1.8;
+color: #777;
+font-size: 17px;
+}
+/* End Features */
