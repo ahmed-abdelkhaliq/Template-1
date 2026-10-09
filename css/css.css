@@ -2,6 +2,7 @@
 /* Start Global Rules */
 :root {
   --main-color: #10cab7;
+  --secondary-color: #2c4755;
 }
 * {
     box-sizing: border-box;
@@ -18,25 +19,68 @@ body  {
   margin-right: auto;
 }
 
-/* Small */
+/* Smallar Mobile S */
+@media (min-width: 320px){
+  .container {
+    width: 300px;
+  }
+}
+/* Smallar Mobile M */
+@media (min-width: 375px){
+  .container {
+    width: 355px;
+  }
+}
+/* Smallar Mobile L */
+@media (min-width: 425px){
+  .container {
+    width: 405px;
+  }
+}
+/* Small & Tablet */
 @media (min-width: 768px){
   .container {
-    width: 750px;
+    width: 748px;
   }
 }
 /* Medium */
 @media (min-width: 992px){
   .container {
-    width: 970px;
+    width: 972px;
   }
 }
 /* Large */
 @media (min-width: 1200px){
   .container {
-    width: 1170px;
+    width: 1180px;
   }
 }
 /* End Global Rules */
+
+/* Start Components */
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -4px;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+@media(max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+  }
+}
+/* End Components */
 
 /* Start Header */
 .header{
@@ -193,3 +237,97 @@ color: #777;
 font-size: 17px;
 }
 /* End Features */
+
+/* Start Services */
+
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+}
+.services .services-content .srv {
+  display: flex;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .services .services-content .srv {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+.services .services-content .srv i {
+  color: var(--main-color);
+  flex-basis: 60px;
+}
+.services .services-content .srv .text {
+  flex: 1;
+}
+.services .services-content .srv .text h3 {
+  margin: 0 0 20px;
+}
+.services .services-content .srv .text p {
+  color: #444;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.services .services-content .imge {
+  text-align: center;
+  position: relative;
+}
+.services .services-content .imge img {
+  width: 260px;
+}
+.services .services-content .imge::before {
+  content: "";
+  position: absolute;
+  right: 5px;
+  top: -50px;
+  background-color: var(--secondary-color);
+  width: 90px;
+  height: calc(100% + 100px);
+  z-index: -1;
+}
+
+@media (max-width: 1199px) and (min-width: 992px){
+  .services .services-content .col:last-child{
+    grid-column: span 2;
+  }
+  .services .services-content .imge::before {
+    right: 295px;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px){
+  .services .services-content .col:last-child{
+    grid-column: span 2;
+  }
+  .services .services-content .imge::before {
+    right: 185px;
+  }
+}
+@media (max-width: 767px) and (min-width: 425px) {
+  .services .services-content .imge::before {
+    right: 10px;
+  }
+}
+@media (max-width: 424px) and (min-width: 375px) {
+  .services .services-content .imge::before {
+    right: -12px;
+  }
+}
+@media (max-width: 374px) and (min-width: 320px) {
+  .services .services-content .imge::before {
+    right: 0px;
+  }
+}
+@media (max-width: 319px) {
+  .services .services-content .imge::before {
+    right: 0px;
+  }
+}
+/* End Services */
