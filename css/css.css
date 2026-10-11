@@ -81,7 +81,7 @@ body  {
 }
 @media(max-width: 767px) {
   .special-heading {
-    font-size: 80px;
+    font-size: 60px;
   }
   .special-heading + p {
     margin-top: -10px;
@@ -396,11 +396,6 @@ font-size: 17px;
   width: 250px;
   height: 375px;
 }
-@media (max-width: 991px) {
-  .about .about-content .image {
-    margin:0 auto 60px;
-  }
-}
 .about .about-content .image img {
 max-width: 100%;
 border-radius: 5%;
@@ -477,9 +472,15 @@ border-radius: 5%;
   text-decoration: none;
 }
 @media (max-width: 767px) {
-  .contact .info .label
+  .contact .info .label,
   .contact .info .link {
-    font-size: 25px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 424px){
+  .contact .info .label,
+  .contact .info .link {
+    font-size: 15px;
   }
 }
 .contact .info .social {
