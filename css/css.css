@@ -25,22 +25,16 @@ body  {
   margin-right: auto;
 }
 
-/* Smallar Mobile S */
-@media (min-width: 320px){
-  .container {
-    width: 300px;
-  }
-}
 /* Smallar Mobile M */
 @media (min-width: 375px){
   .container {
-    width: 355px;
+    width: 360px;
   }
 }
 /* Smallar Mobile L */
 @media (min-width: 425px){
   .container {
-    width: 405px;
+    width: 415px;
   }
 }
 /* Small & Tablet */
@@ -94,7 +88,7 @@ body  {
   background-color: var(--section-background);
   padding: 10px 20px;
   height: 70px;
-  box-shadow: inset 0px 0px 20px 5px #333;
+  
 }
 .header .container {
   display: flex;
@@ -202,10 +196,15 @@ height: 3px;
 
 /* Start Landing Section */
 .landing {
-  background-image: url(../images/landing.jpg);
+  background-image: url(../images/landing-m.jpg);
   background-size: cover;
   height: calc(100vh - 52.39px);
   background-position: center center;
+}
+@media (min-width: 768px){
+  .landing {
+    background-image: url(../images/landing.jpg);
+  }
 }
 /* End Landing Section */
 
@@ -215,7 +214,6 @@ height: 3px;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-color: var(--section-background);
-  box-shadow: inset 0px 0px 20px 5px #333;
 }
 .features .container {
   display: grid;
@@ -345,9 +343,9 @@ font-size: 17px;
 .portfolio .container .special-heading {
   color: white;
 }
-.portfolio .portfolio-content {
+.portfolio .container .portfolio-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 30px;
   margin-top: 80px;
 }
@@ -389,6 +387,7 @@ font-size: 17px;
   .about .about-content {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 }
 .about .about-content .image {
@@ -403,21 +402,19 @@ border-radius: 5%;
 .about .about-content .image::before {
   content: "";
   position: absolute;
-  width: 120px;
   height: 350px;
   border-left: 80px solid #f6f6f6;
   z-index: -1;
-  right: 80px;
+  right: 200px;
   top: -30px;
 }
 .about .about-content .image::after {
   content: "";
   position: absolute;
-  width: 120px;
   height: 300px;
   border-left: 80px solid var(--main-color);
   z-index: -1;
-  right: -150px;
+  right: -40px;
   top: -50px;
 }
 .about .about-content .text {
